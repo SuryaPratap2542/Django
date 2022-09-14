@@ -26,4 +26,5 @@ urlpatterns = [
     path('ind2/',views.ind2),
     # there are three types int , str , slug
     path('ind2/<slug:courseid>',views.courseDetails),
+    # path('home/',views.homePage),
 ]
