@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <style>
+        .main {
+            width: 1000px;
+            background-color: rgb(210, 100, 100);
+            color: aliceblue;
+            padding: 20px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">{{bdata}} {{clist}}
+    </div>
+    <!-- <div class="main">Welcome to my You Tube Channel Dream point , hello how are you
+    </div> -->
+    <h2>Simple For loop</h2>
+    {%for i in clist%}
+    <div>
+        your {{forloop.counter}} course is: {{i}}
+    </div>
+    {%endfor%}
+    <br>
+    <h2>Using for loop access Dictionary</h2>
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Name</th>
+            <th>Phone no</th>
+        </tr>
+        {%for d in student_details %}
+        <tr>
+            <td>{{d.name}}</td>
+            <td>{{d.Phone}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <h2>If Else Statment</h2>
+    List is : {{numbers}}
+    <br>
+    Find Number Which Greater than 20
+    {% for n in numbers %}
+    {% if n > 20 %}
+    <div>
+        {{n}}
+    </div>
+    {%endif%}
+    {%endfor%}
+    <h3>Else condition</h3>
+    {%if num|length > 0 %}
+    {% for n in num %}
+    {% if n > 20 %}
+    <div>
+        {{n}}
+    </div>
+    {%endif%}
+    {%endfor%}
+    {% else %}
+    No Data Found
+    {%endif%}
+</body>
+
+</html>

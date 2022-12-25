@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block content%}
+    <!-- Header End here -->
+
+    <!-- Hero Scetion Start-->
+    <section id="page-header" class="about-header">
+        <h2>#KnowUs</h2>
+        <p>Are you Qurious to know Something!</p>
+    </section>
+    <!-- Hero Scetion End-->
+
+    <!-- About Page Start Here -->
+    <section id="about-head" class="section-p1">
+        <img src="/static/images/about/a6.jpg" alt="">
+        <div>
+            <h2>Who are You</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis laborum laboriosam repellat
+                incidunt vero at minus sint voluptatibus sit et ad dolores qui perferendis, quos debitis assumenda.
+                Iusto porro similique ipsum neque sed accusantium numquam cumque obcaecati optio fugiat atque tempora
+
+                soluta autem labore, repellendus non reprehenderit
+            </p>
+            <abbr title="">Create stunning images with as much or as little control You like thanks to a choice of basic
+                and Creative modes</abbr>
+            <br><br>
+            <marquee loop="-1" scrollamount="5" width="100%">Create stunning images with as much or as little control
+                You like thanks
+                to a choice of basic and Creative modes
+            </marquee>
+        </div>
+    </section>
+    <!-- About Page end Here -->
+    <!-- About app start -->
+    <section id="about-app" class="section-p1">
+        <h1>Download our <a href="#">App</a></h1>
+        <div class="video">
+            <video autoplay muted loop src="/static/images/about/1.mp4"></video>
+        </div>
+    </section>
+    <!-- About app End -->
+    <!-- Feature Section start -->
+    <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="/static/images/features/f1.png" alt="">
+            <h6>Free Shpping</h6>
+        </div>
+        <div class="fe-box">
+            <img src="/static/images/features/f2.png" alt="">
+            <h6>Online Order</h6>
+        </div>
+        <div class="fe-box">
+            <img src="/static/images/features/f3.png" alt="">
+            <h6>Save Money</h6>
+        </div>
+        <div class="fe-box">
+            <img src="/static/images/features/f4.png" alt="">
+            <h6>Promotions</h6>
+        </div>
+        <div class="fe-box">
+            <img src="/static/images/features/f5.png" alt="">
+            <h6>Happy Sell</h6>
+        </div>
+        <div class="fe-box">
+            <img src="/static/images/features/f6.png" alt="">
+            <h6>F24/7 Support</h6>
+        </div>
+    </section>
+    <!-- Feature Section End -->
+    <!-- News Letters Start-->
+    {% comment %} {% include "newsletter.html" %}
+    {% include "footer.html" %} {% endcomment %}
+    <!-- Footer End-->
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
+{% endblock %}

@@ -20,11 +20,19 @@ from dream import views
 
 urlpatterns = [
     path('admin/', admin.site.urls,name='admin'),
-    path('',views.homePage),
-    path('ind0/',views.ind0),
-    path('ind1/',views.ind1),
-    path('ind2/',views.ind2),
+    path('',views.homePage,name='Home'),
+    path('about/',views.about,name='About'),
+    path('blog/',views.blog,name='Blog'),
+    path('cart/',views.cart,name='Cart'),
+    path('contact/',views.contact,name='Contact'),
+    path('shop/',views.shop,name='shop'),
+    path('sproduct/',views.sproduct,name='Sproduct'),
+    path('userform/',views.userform,name='Userform'),
+
+  
+    # path('ind0/',views.ind0),
+    # path('ind1/',views.ind1),
+    # path('ind2/',views.ind2),
     # there are three types int , str , slug
-    path('ind2/<slug:courseid>',views.courseDetails),
-    # path('home/',views.homePage),
+    # path('ind2/<slug:courseid>',views.courseDetails),
 ]

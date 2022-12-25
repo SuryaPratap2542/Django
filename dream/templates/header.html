@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Eccomerce website</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header start from here -->
+    <section id="header">
+        <a href="#"><img src="/static/images/logod.jpg" width="70" height="60" class="logo" alt=""></a>
+        <!-- Nav var Start-->
+        <div>
+            <ul id="navbar">
+                <li><a class="{% if request.path == '/' %} active {% endif %}" href="{% url 'Home' %}">Home</a></li>
+                <li><a class="{% if request.path == '/shop/' %} active {% endif %}" href="{% url 'shop' %}">Shop</a></li>
+                <li><a class="{% if request.path == '/blog/' %} active {% endif %}" href="/blog/">Blog</a></li>
+                <li><a class="{% if request.path == '/about/' %} active {% endif %}" href="/about/">About</a></li>
+                <li><a class="{% if request.path == '/contact/' %} active {% endif %}" href="{% url 'Contact' %} ">Contact</a></li>
+                {% url "Cart" as  url %}
+                <li id="lg-bag"> <a class="{% if request.path == url %} active {% endif %}"  href="{{url}}" ><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <a href="#" id="close"><i class="fa fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile" class="mob">
+            
+             <a href="/cart/"><i class="fa-solid fa-cart-shopping"></i></a>
+             <i id="bar" class="fas fa-outdent"></i>
+        </div>
+        <!-- Nav var End-->
+    </section>
+    <!-- Header End here -->
