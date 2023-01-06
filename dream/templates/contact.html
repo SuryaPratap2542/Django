@@ -44,8 +44,11 @@
     <!-- Contatc detail end here  -->
 
     <!-- Form details Start Here  -->
+    
     <section id="form-details" class="section-p1">
-        <form action="">
+
+
+        {% comment %} <form action="">
             <span>LEAVE A MESSAGE</span>
             <h2>We love to hear from you</h2>
             <input type="text" placeholder="Your Name">
@@ -53,7 +56,19 @@
             <input type="text" placeholder="Subject">
             <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
             <button class="normal">Submint</button>
+        </form> {% endcomment %}
+         {% comment %} hello: {{output}} {% endcomment %}
+        <form action="" method="post" >
+            {% csrf_token %}
+            <span>LEAVE A MESSAGE</span>
+            <h2>We love to hear from you</h2>
+            <input type="text" name="num1" value="{{n1}}" placeholder="Your Name">
+            <input type="text" name="num2" value="{{n2}}" placeholder="E-mail">
+            <input type="text" name="num3" value="{{n3}}" placeholder="Subject">
+            <textarea type="text" name="num4" value="{{n4}}"  id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <button class="normal">Submint</button>
         </form>
+
         <div class="people">
             <div>
                 <img src="/static/images/people/1.png" alt="">

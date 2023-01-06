@@ -19,13 +19,14 @@ def homePage(request):
 def blog(request):
     return render(request,"blog.html")
 def about(request):
-    if request.method=="GET":
-        output=request.GET.get('output')
-    return render(request,"about.html",{'output':output})
+        return render(request,"contact.html")
 def cart(request):
     return render(request,"cart.html")
 def contact(request):
-    return render(request,"contact.html")
+    if request.method=="GET":
+        output=request.GET.get('output')
+    return render(request,"contact.html",{'output':output})
+    # return render(request,"contact.html")
 def shop(request):
     return render(request,"shop.html")
 def sproduct(request):
@@ -49,12 +50,12 @@ def userform(request):
                 "n3":n3,
                 "n4":n4,
             }
-            url="/about/?output={}".format(n1)
-            return redirect(url)
+            url="/contact/?output={}".format(n1)
+            return HttpResponseRedirect(url)
 
     except:
         pass
-    return render(request,"userform.html",data)
+    return render(request,"contact.html",data)
 # def ind0(request):
 #     return HttpResponse("Hello, world.<b> You're at the polls </b> index.")
 # def ind1(request):

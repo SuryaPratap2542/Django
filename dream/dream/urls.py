@@ -29,7 +29,6 @@ urlpatterns = [
     path('sproduct/',views.sproduct,name='Sproduct'),
     path('userform/',views.userform,name='Userform'),
 
-  
     # path('ind0/',views.ind0),
     # path('ind1/',views.ind1),
     # path('ind2/',views.ind2),
